@@ -5,9 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="left">ROLA AMIGOS COMO ESTAO</div>
-    <div class="main"></div>
+    <div class="left">
+        <img id="money" src="img/pexels-karolina-grabowska-4386365.jpg" alt="money">
+        <div class="title">
+            <img src="img/-7K822bT7ulhfmMxhKiVWbU73PDkEYme9XyfRqfZTA0.png" alt="faria-lima">
+            <p>FARIA LIMA</p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="top">
+            <p  class="description">Temos as melhores idéias para se perder dinheiro no mercado.
+                Subdesenvolvimento, agora também no mercado de criptomoedas e ações.
+                <br><br>
+                Obs: <i>Não</i> nos responsabilizamos por perdas financeiras.
+                </p>
+        </div>
+        <div class="center">
+            <h1 class="center-title">CADASTRO</h1>
+            <form action="" class="form" id="form" onsubmit="getPassword()">
+                <div class="campo">
+                    <label for="nome">NOME</label>
+                    <input type="text" id="nome" required placeholder=" ">
+                </div>
+                <div class="campo">
+                    <label for="sobrenome">SOBRENOME</label>
+                    <input type="text" id="sobrenome" required placeholder=" ">
+                </div>
+                <div class="campo">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" required placeholder=" ">
+                </div>
+                <div class="campo">
+                    <label for="tel">TELEFONE</label>
+                    <input type="tel" id="telefone" required placeholder=" ">
+                </div>
+                <div class="campo">
+                    <label for="password">SENHA</label>
+                    <input type="password" id="password" required placeholder=" ">
+                </div>
+                <div class="campo">
+                    <label for="confirmPassword">CONFIRMAR SENHA</label>
+                    <input type="password" id="confirmPassword" required placeholder=" ">
+                </div>
+            </form>
+        </div>
+        <div class="bottom">
+            <button type="submit" form="form" id="btn-criar">Criar Conta</button>
+            <p>Já tem uma conta? <a href="" id="login">Login</a></p>
+        </div>
+    </div>
 </body>
+
+    <script>
+    function getPassword () {
+        let submit = document.querySelector("#btn-criar");
+        let password = document.querySelector("#password").value;
+        let confirm = document.querySelector("#confirmPassword").value;
+        if (password != confirm) {alert("As senhas estão diferentes!");
+            submit.preventDefault();
+            window.history.back();
+        }
+    }
+    </script>
 </html>
